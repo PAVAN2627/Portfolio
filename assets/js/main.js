@@ -71,17 +71,22 @@ modalCloses.forEach((modalClose) => {
         })
     })
 })
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortfolio = new Swiper('.portfolio__container', {
+/*==================== PORTFOLIO SWIPER (Projects) ====================*/
+let swiperProjects = new Swiper('.portfolio .portfolio__container', {
     cssMode: true,
-    loop: true,
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    loop: false, // Disable looping to prevent duplication
     pagination: {
-        el: '.swiper-pagination',
+        el: '.portfolio .swiper-pagination', // Specific selector for Projects
+        clickable: true,
+    },
+});
+
+/*==================== CERTIFICATES SWIPER ====================*/
+let swiperCertificates = new Swiper('.certificate .portfolio__container', {
+    cssMode: true,
+    loop: false, // Disable looping to prevent duplication
+    pagination: {
+        el: '.certificate .swiper-pagination', // Specific selector for Certificates
         clickable: true,
     },
 });
